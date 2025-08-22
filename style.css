@@ -1,0 +1,340 @@
+:root {
+  --body-bg: #123;
+  --nav-bg: #234;
+}
+
+* {
+  box-sizing: border-box;
+}
+html {
+  font-family: Arial, Helvetica, sans-serif;
+}
+body {
+  margin: 0;
+  font-size: 1.25rem;
+  background: #FFF8E1;
+  color: #3E2723;
+  overflow-x: hidden;
+}
+
+.off-screen-menu{
+  background-color: #388E3C;
+  height: 100vh;
+  max-width: 450px;
+  position: fixed;
+  top: 0;
+  right: -450px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 3rem;
+  transition: .3s ease;
+  z-index: 1;
+  padding: 5px;
+  font-family: "Nerko One", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.off-screen-menu.active{
+  right:0;
+}
+
+nav{
+  padding: 1rem;
+  display: flex;
+  background-color: #388E3C;
+}
+
+.ham-menu{
+  height: 50px;
+  width: 50px;
+  margin-left: auto;
+  position: relative;
+  z-index: 2;
+}
+
+.ham-menu span{
+  height: 5px;
+  width: 100%;
+  background-color: #FBC02D;
+  border-radius: 25px;
+  position:absolute;
+  top:50%;
+  left:50%;
+  transform: translate(-50%, -50%);
+  transition: 0.3s ease;
+}
+
+
+
+.ham-menu span:nth-child(1){
+  top:25%
+}
+
+.ham-menu span:nth-child(3){
+  top:75%;
+}
+
+.ham-menu.active span:nth-child(1){
+  top: 50%;
+  transform: translate(-50%, -50%) rotate(45deg);
+
+}
+
+.ham-menu.active span:nth-child(2){
+  opacity: 0;
+}
+
+.ham-menu.active span:nth-child(3){
+  top:50%;
+  transform: translate(-50%,-50%) rotate(-45deg);
+}
+
+.overflow{
+  overflow: scroll;
+}
+
+.calendar{
+  border:5px solid #ebdbfb;
+  width: 100%;
+}
+
+
+
+
+.imp-pt{
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+
+.responsive {
+  width: 90%;
+  height: 100vh;
+  margin:auto;
+  padding: 0px;
+}
+
+.sizing{
+  width:100%;
+}
+
+.form .calendar{
+  min-width: 300px;
+  margin:auto;
+  width: 100%;
+}
+
+h1{
+  text-align: center;
+  font-family: "Nerko One", cursive;
+  font-weight: 400;
+  font-size: 6vw;
+  font-style: normal;
+}
+
+a{
+  color:#3E2723;
+  text-decoration: none;
+}
+
+li{
+  list-style-type: none;
+}
+.p-container{
+  width: 100%;
+  padding: 5px;
+}
+
+.photo-container{
+  padding: 2rem 5%;
+}
+
+.photo-container .small-photo-container{
+  columns: 15rem 3;
+  gap: 1.4rem;
+}
+
+.photo-container .small-photo-container img {
+  width: 100%;
+  margin-bottom: 1rem;
+  border-radius: 0.7rem;
+}
+
+.photo-container .small-photo-container img:hover{
+  transform: scale(1.01);
+}
+
+p{
+  text-align: center;
+}
+
+.aboutus-container .small-aboutus-container{
+  columns: 40rem 2;
+  gap: 1.4rem;
+  margin-right: 3vw;
+  margin-left: 3vw;
+}
+
+.hsi-link:link {
+  color: blue;
+  text-decoration: underline;
+}
+
+
+.home-info{
+  text-align: center;
+}
+
+.home-info a{
+  color: blue;
+  text-decoration: underline;
+}
+
+.home-info-container{
+  margin: auto;
+  margin-left: 3vw;
+  margin-right: 3vw;
+}
+
+
+
+.form{
+  width: 100%;
+}
+
+.sub-head-home{
+  font-weight: bold;
+}
+
+.donate-home{
+  margin: auto;
+  width:30vw;
+}
+.home-body {
+  background-image: url('images/backdrop.mhtml');
+}
+
+.head-img{
+  width: 100%;
+}
+
+#book-walk-button{
+  background-color: #4FC3F7;
+  color:#c88067;
+  border-radius: 1rem;
+  border-color:#4FC3F7;
+  width:25vw;
+  height:10vw;
+  font-size: larger;
+  font-weight: bolder;
+}
+
+
+
+.inofgraph-prices, .small-inofgraph-prices{
+  columns: 50rem 2;
+  gap: 15rem;
+  margin-right: 3vw;
+  margin-left: 3vw;
+}
+
+
+
+.hero {
+  position: relative;
+  height: 400px; /* Adjust height as you like */
+  background: url('images/backdrop.jpg') center/cover no-repeat;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-attachment: fixed;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(56,142,60, 0.5); /* semi-transparent yellow */
+}
+
+.hero-text {
+  position: relative; /* makes sure text is above the overlay */
+  /*z-index: 1;*/
+}
+
+.hero-text h1{
+  font-size: 8vh;
+}
+
+.btn {
+  background: #66BB6A;
+  padding: 10px 20px;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: bold;
+}
+
+.btn {
+  background: #FFB300;
+  padding: 12px 24px;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  background: #FFA000;
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+.logo{
+  position: absolute;
+  z-index: 2;
+  height: 4vh;
+  left: 3%;
+  top: 4.5%;
+  margin-right: 3%;
+}
+
+.logo-text{
+  position: absolute;
+  z-index: 2;
+  height: 15vw;
+  top: 3%;
+  left: 6%;
+  font-size: 6vh;
+  font-family: "Nerko One", cursive;
+  color: white;
+}
+
+
+#location-header{
+  margin-top: 2%;
+  text-align: center;
+  margin-left: 3%;
+  font-weight: bold;
+}
+
+#location-header a{
+  color:blue;
+  text-decoration: underline;
+}
+
+.park_img{
+  width: 100%;
+  border-radius: 25px;
+  /*clip-path: circle(50%);*/
+  margin-left:auto;
+}
