@@ -244,7 +244,7 @@ p{
 
 .hero {
   position: relative;
-  height: 400px; /* Adjust height as you like */
+  height: 400px; 
   background: url('images/backdrop.jpg') center/cover no-repeat;
   color: white;
   display: flex;
@@ -260,11 +260,11 @@ p{
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(56,142,60, 0.5); /* semi-transparent yellow */
+  background-color: rgba(56,142,60, 0.5);
 }
 
 .hero-text {
-  position: relative; /* makes sure text is above the overlay */
+  position: relative; 
   /*z-index: 1;*/
 }
 
